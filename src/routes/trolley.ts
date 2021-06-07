@@ -4,14 +4,14 @@ import { getTrolleyTotal } from '../service/trolley.service';
 
 const trolleyRouter: Router = express.Router();
 
-trolleyRouter.post('/', (req, res) => {
+trolleyRouter.post('/', async (req, res) => {
   try {
     const payload = req.body;
     if (!payload) {
       throw new Error('Body required');
     }
     const data = await getTrolleyTotal(payload);
-    res.status(200).send(data);
+    res.status(200).send(`${data}`);
   } catch (e) {
     res.status(400).send(e.message);
   }
