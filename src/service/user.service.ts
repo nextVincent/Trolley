@@ -3,7 +3,7 @@ import { TOKEN } from '../shared/constant';
 
 const userGet = (): User => {
   return {
-    name: 'Weixin Liang (Vincent)',
+    name: 'Vincent Liang',
     token: TOKEN,
   };
 };

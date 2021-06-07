@@ -5,7 +5,6 @@ const getTrolleyTotal = async (dto: any): Promise<number> => {
 };
 
 
-// best try without resource calculator
 /**
  * With currenct calculator behaviour, best guess following logic should appear
  * - Products[] and Quantities[] mandatory and must match on each product.name
