@@ -10,7 +10,7 @@ trolleyRouter.post('/', (req, res) => {
     if (!payload) {
       throw new Error('Body required');
     }
-    const data = getTrolleyTotal(payload);
+    const data = await getTrolleyTotal(payload);
     res.status(200).send(data);
   } catch (e) {
     res.status(400).send(e.message);
