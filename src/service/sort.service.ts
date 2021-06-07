@@ -16,10 +16,10 @@ export const getSortedProducts = async (
       response = products.sort((a, b) => b.price - a.price);
       break;
     case SortOptionEnum.ASC:
-      response = products.sort((a, b) => (a.name > b.name ? -1 : 1));
+      response = products.sort((a, b) => (b.name > a.name ? -1 : 1));
       break;
     case SortOptionEnum.DESC:
-      response = products.sort((a, b) => (b.name > a.name ? -1 : 1));
+      response = products.sort((a, b) => (a.name > b.name ? -1 : 1));
       break;
     case SortOptionEnum.REMD:
       const shopistory = await getShopperHistory();
