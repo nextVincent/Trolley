@@ -23,7 +23,7 @@ const getTotalPrice = async (cartDto: any): Promise<number> => {
     .post(`api/resource/trolleyCalculator?token=${TOKEN}`, {
       json: cartDto,
     })
-    .json();
+    .json() as number;;
 };
 
 export { getShopperHistory, getProducts, getTotalPrice };
